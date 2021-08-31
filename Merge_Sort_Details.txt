@@ -1,0 +1,35 @@
+Merge Sort - a Divide and Conquer algorithm.
+
+Main Idea: Divides the input array into two halves, calls itself for the two halves, and then merges the two sorted halves.
+
+ALGORITHM (Recursion):
+
+Merge_Sort()
+
+Step 1: We proceed with Merge Sort only if current array len is greater than 1
+Step 2: Find the middle point to divide the array into two equal halves
+Step 3: Call the Merge_Sort for the first half - (goes back to step one with the left array)
+Step 4: Call the Merge_Sort for the second half - (goes back to step one with the right array)
+
+Step 5: Step 1 to Step4 repeats until the length of our current array is 1
+Step 6: We sort the 1 length array of both left and right side - using two pointers
+Step 7: After sorting the smallest subpart we return to the last function in the recursion stack
+
+Step 8: Till the time we come back to our very first recursion call, we have a sorted array
+
+
+Time and Space Complexity:
+
+	Time Complexity : Always O(nlogn) - cause divides the array into two halves, and takes linear time to merge them
+	Space Complexity : O(n)
+
+
+Uses:
+	Useful in sorting linked lists in O(nlogn)time
+	Inversion Count Problem
+	Used in External Sorting
+
+Drawbacks:
+	Slower comparative to other sort algorithms for smaller tasks
+	It goes through the whole process even if the array is sorted
+	Requires additional space of O(n) - for the temporary array

@@ -1,0 +1,31 @@
+Insertion Sort
+
+Insertion Sort is a very simple sorting algorithm that works similar to the way you sort playing cards in your hands. 
+We virtually split the array into sorted and unsorted parts.  Values from the unsorted parts are picked and placed at the correct position in the sorted part.
+
+Algorithm:
+
+STEP 1: Iterate from arr[1] to arr[n] over the array
+STEP 2: At every Iteration compare the current element (also called key) to its predecessor
+STEP 3: If the current element (key) is smaller than its predecessor
+STEP 4: Swap the current element with its predecessor
+STEP 5: Repeat STEP 3 until there are no smaller elements to the left of the key
+
+Time and Space Complexity:
+
+Time Complexity : O(n^2)
+Space Complexity: O(1)
+
+Edge Cases:
+	Insertion sort takes maximum time to sort if the elements are sorted in reverse order.
+	And it takes minimum time when the elements are already sorted.
+
+Uses:
+	Insertion Sort can be used when number of elements is small.
+	It can also be useful when the input array is almost sorted, and only a few elements are 
+	misplace.
+
+Binary Insertion Sort:
+
+We can use Binary Search to find the perfect location to insert our key element.  But this enhancement to Insertion Sort only improves searching part of our algorithm to O(nlogn).  
+Insertion part of our algorithm would still take O(n^2) Time - because of the swaps needed.
